@@ -1,0 +1,181 @@
+@use "mixins" as *;
+
+$White: hsl(0, 0%, 100%);
+$Black: hsl(0, 0%, 0%);
+$DarkGray: hsl(0, 0%, 55%);
+$VeryDarkGray: hsl(0, 0%, 41%);
+$GradientToTop: linear-gradient(to top, hsla(0, 0%, 0%, 0.6), transparent);
+$GradientToRight: linear-gradient(to right, hsla(0, 0%, 0%, 0.6), transparent);
+$font-Alata: 'Alata', sans-serif;
+$font-Josefin: 'Josefin Sans', sans-serif;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: $White;
+    font-size: 1.5rem;
+    font-family: $font-Alata;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+h1,
+h2 {
+    font-family: $font-Josefin;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 7.2rem;
+    line-height: 7rem;
+
+    @include bp(md) {
+        font-size: 5rem;
+        line-height: 7rem;
+    }
+}
+
+h2 {
+    font-size: 4.8rem;
+    color: $Black;
+
+    @include bp(md) {
+        font-size: 4rem;
+        text-align: center;
+    }
+}
+
+p {
+    color: $DarkGray;
+    line-height: 2.5rem;
+
+    @include bp(md) {
+        font-size: 2.4rem;
+        line-height: 4rem;
+        text-align: center;
+    }
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+// reusable
+.container {
+    position: relative;
+    // max-width: 111.4rem;
+    max-width: 120rem;
+    height: 100%;
+    padding: 0 4.3rem;
+    margin: 0 auto;
+
+    @include bp(md) {
+        padding: 0;
+    }
+}
+
+.links {
+    a {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -1.2rem;
+            left: 0;
+            right: 0;
+            height: 0.2rem;
+            margin: 0 1.5rem;
+            background-color: $White;
+            opacity: 0;
+            transition: opacity .3s ease;
+            z-index: 5;
+        }
+
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &-header {
+
+        :not(:last-child) {
+            margin-right: 2.9rem;
+        }
+
+        @include bp(md) {
+            display: none;
+        }
+    }
+
+    &-footer {
+        a {
+            margin-right: 2.9rem;
+
+            @include bp(md) {
+                margin: 2rem;
+                font-size: 2.6rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-right: 2.9rem;
+
+                &::after {
+                    bottom: -0.5rem;
+                    margin: 0 4rem;
+                    background-color: white;
+                    opacity: 0;
+                    transition: opacity .3s ease;
+                    z-index: 5;
+                }
+            }
+        }
+    }
+}
+
+// flex
+.fx {
+    display: flex;
+
+    &-jc-c {
+        display: flex;
+        justify-content: center;
+    }
+
+    &-jc-sb {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-ai-c {
+        display: flex;
+        align-items: center;
+    }
+
+    &-jcai-c {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
