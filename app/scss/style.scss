@@ -34,7 +34,7 @@
         #hb-menu {
             width: 4rem;
             height: 3rem;
-            background: url(/images/icon-hamburger.svg) no-repeat;
+            background: url(../images/icon-hamburger.svg) no-repeat;
             background-size: cover;
             display: none;
 
@@ -95,7 +95,7 @@
                 #hb-close {
                     width: 4rem;
                     height: 4rem;
-                    background: url(/images/icon-close.svg) no-repeat;
+                    background: url(../images/icon-close.svg) no-repeat;
                     background-size: contain;
 
                     &:hover {
@@ -167,7 +167,7 @@
             max-width: 100%;
             max-height: 50rem;
             margin: 0;
-            background: url(/images/mobile/image-interactive.jpg) no-repeat center center;
+            background: url(../images/mobile/image-interactive.jpg) no-repeat center center;
             background-size: contain;
         }
     }
@@ -188,7 +188,6 @@
         @include u.bp(md) {
             position: static;
             min-width: 37rem;
-            // margin: 5rem 0;
             padding: 0 0 10rem 0;
             align-items: center;
             justify-content: center;
@@ -282,7 +281,6 @@
             // margin: 0 auto;
             grid-template-columns: 1fr;
             grid-template-rows: repeat(8, 1fr);
-            // justify-content: center;
         }
 
         .img-link {
@@ -296,11 +294,9 @@
 
             @include u.bp(md) {
                 height: 24rem;
-                // justify-content: center;
             }
 
             span {
-                // width: 17.6rem;
                 width: 68%;
                 height: 6rem;
                 margin-bottom: 3.6rem;
@@ -368,7 +364,7 @@
 
             @include u.bp(md) {
                 max-width: 100%;
-                background: url(/images/mobile/image-deep-earth.jpg) no-repeat center;
+                background: url(../images/mobile/image-deep-earth.jpg) no-repeat center;
             }
         }
 
@@ -377,7 +373,7 @@
 
             @include u.bp(md) {
                 max-width: 100%;
-                background: url(/images/mobile/image-night-arcade.jpg) no-repeat center;
+                background: url(../images/mobile/image-night-arcade.jpg) no-repeat center;
             }
         }
 
@@ -386,7 +382,7 @@
 
             @include u.bp(md) {
                 max-width: 100%;
-                background: url(/images/mobile/image-soccer-team.jpg) no-repeat center;
+                background: url(../images/mobile/image-soccer-team.jpg) no-repeat center;
             }
         }
 
@@ -395,7 +391,7 @@
 
             @include u.bp(md) {
                 max-width: 100%;
-                background: url(/images/mobile/image-grid.jpg) no-repeat center;
+                background: url(../images/mobile/image-grid.jpg) no-repeat center;
             }
         }
 
@@ -404,16 +400,16 @@
 
             @include u.bp(md) {
                 max-width: 100%;
-                background: url(/images/mobile/image-from-above.jpg) no-repeat center;
+                background: url(../images/mobile/image-from-above.jpg) no-repeat center;
             }
         }
 
         :nth-child(6) {
-            background: url(/images/desktop/image-pocket-borealis.jpg) no-repeat;
+            background: url(../images/desktop/image-pocket-borealis.jpg) no-repeat;
 
             @include u.bp(md) {
                 max-width: 100%;
-                background: url(/images/mobile/image-pocket-borealis.jpg) no-repeat center;
+                background: url(../images/mobile/image-pocket-borealis.jpg) no-repeat center;
             }
         }
 
@@ -422,7 +418,7 @@
 
             @include u.bp(md) {
                 max-width: 100%;
-                background: url(/images/mobile/image-curiosity.jpg) no-repeat center;
+                background: url(../images/mobile/image-curiosity.jpg) no-repeat center;
             }
         }
 
@@ -431,7 +427,7 @@
 
             @include u.bp(md) {
                 max-width: 100%;
-                background: url(/images/mobile/image-fisheye.jpg) no-repeat center;
+                background: url(../images/mobile/image-fisheye.jpg) no-repeat center;
             }
         }
     }
@@ -447,9 +443,6 @@
     }
 
     .container {
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: center;
 
         @include u.bp(md) {
             flex-direction: column;
