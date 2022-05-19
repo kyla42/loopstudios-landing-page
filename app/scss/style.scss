@@ -249,7 +249,7 @@
             letter-spacing: 0.4rem;
             border: 0.2rem solid u.$DarkGray;
             border-radius: 0.2rem;
-            transition: color .3s ease;
+            transition: all .3s ease;
 
             @include u.bp(md) {
                 width: 20rem;
