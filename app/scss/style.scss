@@ -41,6 +41,7 @@
             @include u.bp(md) {
                 display: flex;
                 align-items: flex-end;
+                -webkit-tap-highlight-color:rgba(0,0,0,0);
             }
         }
     }
@@ -97,6 +98,7 @@
                     height: 4rem;
                     background: url(../images/icon-close.svg) no-repeat;
                     background-size: contain;
+                    -webkit-tap-highlight-color:rgba(0,0,0,0);
 
                     &:hover {
                         transform: rotate(90deg);
@@ -115,6 +117,7 @@
                     font-family: u.$font-Josefin;
                     font-size: 4rem;
                     margin-bottom: 4rem;
+                    -webkit-tap-highlight-color:rgba(0,0,0,0);
 
                     &:hover {
                         transform: translateX(10%) scale(1.2);
