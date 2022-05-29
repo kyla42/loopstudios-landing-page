@@ -26,6 +26,7 @@
     &__navbar {
         height: 16.1rem;
         padding: 0 0.2rem;
+        @extend %fx-jc-sb, %fx-ai-c;
 
         .logo {
             height: 3.4rem;
@@ -73,6 +74,11 @@
 
     .overlay {
         display: none;
+        transition: all .5s ease;
+
+        &__navbar {
+            @extend %fx-jc-sb, %fx-ai-c;
+        }
 
         @include u.bp(md) {
             position: absolute;
@@ -117,6 +123,7 @@
                     font-family: u.$font-Josefin;
                     font-size: 4rem;
                     margin-bottom: 4rem;
+                    transition: all .3s ease-in-out;
                     -webkit-tap-highlight-color:rgba(0,0,0,0);
 
                     &:hover {
@@ -150,6 +157,8 @@
     }
 
     .container {
+        @extend %fx-ai-c;
+
         @include u.bp(md) {
             flex-direction: column;
             justify-content: flex-start;
@@ -229,6 +238,7 @@
     }
 
     &__title {
+        @extend %fx-ai-c;
         grid-area: title;
 
         @include u.bp(md) {
@@ -237,7 +247,7 @@
     }
 
     &__btn {
-        justify-content: flex-end;
+        @extend %fx-jc-e, %fx-ai-c;
         grid-area: btn;
 
         @include u.bp(md) {
@@ -252,6 +262,7 @@
             letter-spacing: 0.4rem;
             border: 0.2rem solid u.$DarkGray;
             border-radius: 0.2rem;
+            @extend %fx-jcai-c;
             transition: all .3s ease;
 
             @include u.bp(md) {
@@ -314,7 +325,7 @@
                     width: 80%;
                     font-size: 3.6rem;
                     display: flex;
-                    justify-content: start;
+                    justify-content: start
                 }
             }
 
@@ -446,6 +457,7 @@
     }
 
     .container {
+        @extend %fx-jc-sb, %fx-ai-c;
 
         @include u.bp(md) {
             flex-direction: column;
@@ -472,7 +484,7 @@
     }
 
     .social {
-        justify-content: flex-end;
+        @extend %fx-ai-c, %fx-jc-e;
 
         @include u.bp(md) {
             justify-content: center;
